@@ -5,20 +5,7 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var Pinto = L.Icon.extend({
-  options: {
-     iconSize:     [38, 95],
-     shadowSize:   [50, 64],
-     iconAnchor:   [22, 94],
-     shadowAnchor: [4, 62],
-     popupAnchor:  [-3, -76]
-  }
-});
 
-var Icon = new LeafIcon({
-  iconUrl: 'pinto.psd',
-  shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-})
 
 var popup = L.popup();
 
@@ -31,7 +18,7 @@ function onMapClick(e) {
 
 map.on('click', onMapClick);
   
-var marker = L.marker([40.110103, -88.227232],{icon:Icon} ).addTo(map);
+var marker = L.marker([40.110103, -88.227232] ).addTo(map);
 
 marker.bindPopup("<b>click anywhere on map to get cooridnates of point.").openPopup();
 
